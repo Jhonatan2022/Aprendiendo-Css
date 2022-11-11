@@ -1,6 +1,6 @@
 # Aprendiendo-Css
 
-## [Enlace para ver el sitio web](https://jhonatan2022.github.io/SECODE_QR/secode/views/) 💻🌐✅
+## [Enlace para ver el sitio web](https://jhonatan2022.github.io/Aprendiendo-Css/Aprendiendo%20css.html) 💻🌐✅
 
 ---
 
