@@ -1,176 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--Encabezado de la pestaña-->
-    <title>Aprendiendo CSS3</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--Logo de la pestaña-->
-    <link rel="shortcut icon" type="image/png" href="Imagenes/logo.png" />
+  <!--Encabezado de la pestaña-->
+  <title>Aprendiendo CSS3</title>
 
-    <!--Estilos de la pagina-->
-    <link rel="stylesheet" href="css/estilso.css" />
+  <!--Logo de la pestaña-->
+  <link rel="shortcut icon" type="image/png" href="Imagenes/logo.png" />
 
-    <!--Iconos de la pagina-->
-    <script
-      src="https://kit.fontawesome.com/519a36fc48.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <!--Barra de navegación-->
-    <nav class="barra">
-      <a href="#" class="logo">Aprendiendo Css</a>
-      <input type="checkbox" id="toggler" />
-      <label for="toggler"><i class="fa-solid fa-bars" ></i> </label>
-      <div class="menu">
-        <ul class="enlaces">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Divertido</a></li>
-          <li><a href="#">Animaciones con css</a></li>
-          <li><a href="#">Pendiente</a></li>
-        </ul>
+  <!--Estilos de la pagina-->
+  <link rel="stylesheet" href="css/Estilos.css" />
+
+  <!--Iconos de la pagina-->
+  <script src="https://kit.fontawesome.com/519a36fc48.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+  <!--Fondo animado-->
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <!--Fin fondo animado-->
+
+
+  <!--Barra de navegación-->
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <a href="Aprendiendo css.html" class="enlace">
+      <img src="Imagenes/logo.png" alt="" class="logo">
+    </a>
+    <ul>
+      <li><a class="active" href="#">Inicio</a></li>
+      <li><a href="#">Nosotros</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Portafolio</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+  <!--Fin barra de navegación-->
+
+
+  <br><br><br><br>
+
+
+  <!--Fantasma animado-->
+  <div class="contenedor">
+    <div class="caja">
+      <div class="cara cara1">
+        <div class="contenido">
+          <i class="fa-solid fa-ghost"></i>
+          <h3>Animación de fantasma</h3>
+        </div>
       </div>
-    </nav>
-    <!--Fin barra de navegación-->
-
-    <!--Fantasma animado-->
-    <div class="contenedor">
-      <div class="caja">
-          <div class="cara cara1">
-            <div class="contenido">
-              <i class="fa-solid fa-ghost"></i>
-              <h3>Animación de fantasma</h3>
-            </div>
-          </div>
-          <div class="cara cara2">
-            <div class="contenido">
-              <img src="Imagenes/fantasmass.webp" class="fantasma" />
-            </div>
-          </div>
-      </div>
-    </div>
-    <!--Fin fantasma animado-->
-
-    <!--cuadrado animado-->
-    <div class="contenedor">
-      <div class="caja">
-          <div class="cara cara1">
-            <div class="contenido">
-              <i class="fa-solid fa-square"></i>
-              <h3>Cuadro animado</h3>
-            </div>
-          </div>
-          <div class="cara cara2">
-            <div class="contenido">
-              <div class="cuadro"></div>
-            </div>
-          </div>
-      </div>
-    </div>
-    <!--final de cuadrado animado-->
-
-    <!--Circulo animado-->
-    <div class="contenedor">
-      <div class="caja">
-          <div class="cara cara1">
-            <div class="contenido">
-              <i class="fa-solid fa-circle"></i>
-              <h3>Circulo animado</h3>
-            </div>
-          </div>
-          <div class="cara cara2">
-            <div class="contenido">
-              <div class="circulo"></div>
-            </div>
-          </div>
+      <div class="cara cara2">
+        <div class="contenido">
+          <img src="imagenes/fantasmass.webp" class="fantasma" />
+        </div>
       </div>
     </div>
-    <!--final de circulo animado-->
+  </div>
+  <!--Fin fantasma animado-->
 
-    <!--Contenerdor de información-->
-    <div class="contenedor">
-      <div class="caja">
-          <div class="cara cara1">
-            <div class="contenido">
-              <i class="fa-regular fa-circle"></i>
-              <h3>De nuevo el circulo animado</h3>
-            </div>
-          </div>
-          <div class="cara cara2">
-            <div class="contenido">
-              <div class="circulo2"></div>
-            </div>
-          </div>
+  <!--cuadrado animado-->
+  <div class="contenedor">
+    <div class="caja">
+      <div class="cara cara1">
+        <div class="contenido">
+          <i class="fa-solid fa-square"></i>
+          <h3>Cuadro animado</h3>
+        </div>
+      </div>
+      <div class="cara cara2">
+        <div class="contenido">
+          <div class="cuadro"></div>
+        </div>
       </div>
     </div>
-    <!--Final contenedor de información-->
+  </div>
+  <!--final de cuadrado animado-->
 
-    <!--Animación de circulos-->
-    <div class="contenedor">
-      <div class="caja">
-          <div class="cara cara1">
-            <div class="contenido">
-              <i class="fa-solid fa-circle-nodes"></i>
-              <h3>Animación con tres ciruclos</h3>
-            </div>
-          </div>
-          <div class="cara cara2" style="background-color: black ;">
-            <div class="contenido">
-              <div class="contenidoint">
-                 <div class="circulos"></div>
-                <div class="circulos"></div>
-                <div class="circulos"></div>
-                <p>Esperateeee!...</p>
-              </div>             
-            </div>
-          </div>
+  <!--Circulo animado-->
+  <div class="contenedor">
+    <div class="caja">
+      <div class="cara cara1">
+        <div class="contenido">
+          <i class="fa-solid fa-circle"></i>
+          <h3>Circulo animado</h3>
+        </div>
+      </div>
+      <div class="cara cara2">
+        <div class="contenido">
+          <div class="circulo"></div>
+        </div>
       </div>
     </div>
-    <!--Final animación de circulos-->
+  </div>
+  <!--final de circulo animado-->
 
-    <!--Botones animados-->
-    <div class="contenedor" style="background-color: black;">
-      <div class="caja" >
-          <button class="boton1">Hola mundo</button>
-          <button class="boton1">Hola mundo</button>
-          <div class="boton2">
-            <span></span>
-            <span></span>
-            <span><i class="fa-brands fa-python"></i></span>
-            <span></span>
-          </div>
+  <!--Contenerdor de información-->
+  <div class="contenedor">
+    <div class="caja">
+      <div class="cara cara1">
+        <div class="contenido">
+          <i class="fa-regular fa-circle"></i>
+          <h3>De nuevo el circulo animado</h3>
+        </div>
+      </div>
+      <div class="cara cara2">
+        <div class="contenido">
+          <div class="circulo2"></div>
+        </div>
       </div>
     </div>
-    <!--Final botones animados-->
+  </div>
+  <!--Final contenedor de información-->
 
-    <!--Animación de cubo-->
-    <div class="contenedor">
-      <div class="caja">
-          <div class="cara cara1">
-            <div class="contenido">
-              <i class="fa-solid fa-cube"></i>
-              <h3>Animación de cubo en 3d</h3>
-            </div>
+  <!--Animación de circulos-->
+  <div class="contenedor">
+    <div class="caja">
+      <div class="cara cara1">
+        <div class="contenido">
+          <i class="fa-solid fa-circle-nodes"></i>
+          <h3>Animación con tres ciruclos</h3>
+        </div>
+      </div>
+      <div class="cara cara2" style="background-color: black ;">
+        <div class="contenido">
+          <div class="contenidoint">
+            <div class="circulos"></div>
+            <div class="circulos"></div>
+            <div class="circulos"></div>
+            <p>Esperateeee!...</p>
           </div>
-          <div class="cara cara2" style="background-color: black ;">
-            <div class="contenido">
-              <div class="cubo">
-                <div class="superior"></div>
-                <div>
-                  <span style="--i:0;"></span>
-                  <span style="--i:1;"></span>
-                  <span style="--i:2;"></span>
-                  <span style="--i:3;"></span>
-                </div>
-              </div>             
-            </div>
-          </div>
+        </div>
       </div>
     </div>
-    <!--Final animación de cubo-->
-  </body>
+  </div>
+  <!--Final animación de circulos-->
+
+
+  <!--Animación de circulos en caida-->
+  <div class="contenedor">
+    <div class="caja">
+      <div class="cara cara1">
+        <div class="contenido">
+          <i class="fa-sharp fa-solid fa-circle-down"></i>
+          <h3>Fondo animado circulos</h3>
+        </div>
+      </div>
+      <div class="cara cara2">
+        <div class="contenido">
+          <div class="fondo">
+            <div class="circ"></div>
+            <div class="circ"></div>
+            <div class="circ"></div>
+            <div class="circ"></div>
+            <div class="circ"></div>
+            <div class="circ"></div>
+            <div class="circ"></div>
+            <div class="circ"></div>
+            <div class="circ"></div>
+            <div class="circ"></div>
+            <div class="circ"></div>
+            <div class="circ"></div>
+            <div class="circ"></div>
+            <div class="circ"></div>
+            <div class="circ"></div>
+            <div class="bordes"></div>
+            <div class="bordes"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--Final animación de circulos en caida-->
+
+  <!--Botones animados-->
+  <div class="contenedor" style="background-color: black;">
+    <div class="caja">
+      <button class="boton1">Hola mundo</button>
+      <button class="boton1">Hola mundo</button>
+      <div class="boton2">
+        <span></span>
+        <span></span>
+        <span><i class="fa-brands fa-python"></i></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!--Final botones animados-->
+
+  <!--Animación de cubo-->
+  <div class="contenedor">
+    <div class="caja">
+      <div class="cara cara1">
+        <div class="contenido">
+          <i class="fa-solid fa-cube"></i>
+          <h3>Animación con tres ciruclos</h3>
+        </div>
+      </div>
+      <div class="cara cara2" style="background-color: black ;">
+        <div class="contenido">
+          <div class="cubo">
+            <div class="superior"></div>
+            <div>
+              <span style="--i:0;"></span>
+              <span style="--i:1;"></span>
+              <span style="--i:2;"></span>
+              <span style="--i:3;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Final animación de cubo-->
+
+
+</body>
+
 </html>
