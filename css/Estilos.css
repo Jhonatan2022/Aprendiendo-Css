@@ -727,6 +727,29 @@ section{
   transform: translate(30px, 16px);
   transition-delay: .2s;
 }
+
+#github {
+  font-size: 4em;
+  background-color: #18191f;
+  color: #fff;
+  box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080, 2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080;
+  border-radius: 29px;
+  padding: 11px 19px;
+  margin-top: 0.2em;
+  margin-right: -1em;
+  animation: github 3s linear infinite;
+  text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
+}
+
+@keyframes github {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
 /*final botones animados*/
 
 /*Cubo animado*/
@@ -787,6 +810,54 @@ section{
   box-shadow: 0 0 40px rgb(168, 194, 255);
 }
 /*final de cubo animado*/
+
+/*Cubo dos animado*/
+.cube {
+  height: 150px;
+  width: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+ animation: rotate 4s linear infinite;
+}
+
+.cube div {
+  position: absolute;
+  height: 130px;
+  width: 130px;
+  opacity: 0.9;
+  background: linear-gradient(to right, #0014ff, #6c6c6c);
+}
+
+.s1 {
+  transform: translateZ(65px);
+}
+
+.s2 {
+  transform: rotateY(90deg) translateZ(65px);
+}
+
+.s3 {
+  transform: rotateY(180deg) translateZ(65px);
+}
+
+.s4 {
+  transform: rotateX(90deg) translateZ(65px);
+}
+
+.s5 {
+  transform: rotateY(-90deg) translateZ(65px);
+}
+
+.s6 {
+  transform: rotateX(-90deg) translateZ(65px) rotate(180deg);
+}
+
+@keyframes rotate {
+  100% {
+      transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+/*Final cubo dos animado*/
 
 /*Animación de circulos en caida*/
 .fondo{
@@ -925,12 +996,175 @@ section{
 }
 /*Final animación circulos en caida*/
 
+/*Animacion de precarga*/
+
+.box-shadow {
+  display: block;
+  margin: auto;
+  width: 80%;
+  line-height: 106px;
+  animation-name: opa;
+  animation-duration: 0.6s;
+  animation-iteration-count: 1;
+}
+
+.dot {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 50%;
+  margin: 0 2px;
+  animation: wave .5s infinite;
+  animation-timing-function: cubic-bezier(0.64, 0.12, 0.79, 0.35);
+  animation-direction: alternate;
+}
+
+.shadow {
+  display: inline-block;
+  text-align: center;
+  margin: 0 2px;
+  border-radius: 50%;
+  opacity: 0.5;
+  width: 30px;
+  height: 5px;
+  background-color: rgba(11, 15, 19, 0.42);
+  animation-name: strech ;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.64, 0.12, 0.79, 0.35);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes wave {
+  /* 0% {transform: translateY(0);} */
+  0% {transform: translateY(0px);}
+  100% {transform: translateY(60px);}
+}
+
+@keyframes strech {
+  0% {transform: scale(0)}
+  100% {transform: scale(1)}
+}
+
+@keyframes opa {
+  0% {opacity: 0;}
+  99% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.dot.two, .shadow.two {
+  animation-delay: 0.3s;
+}
+
+.dot.three, .shadow.three {
+  animation-delay: 0.6s;
+}
+/*Fin animacion precarga*/
 
 
+/*Animación dos de carga*/
 
 
+.dota {
+  display: inline-block;
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  background-color: #3f01b0;
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -webkit-animation: superDots 2s linear infinite;
+  animation: superDots 2s linear infinite;
+}
 
+.dota:nth-child(1) {
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+}
 
+.dota:nth-child(2) {
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
+}
+
+.dota:nth-child(3) {
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
+}
+
+.dota:nth-child(4) {
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+
+.dota:nth-child(5) {
+  -webkit-animation-delay: .4s;
+  animation-delay: .4s;
+}
+
+@-webkit-keyframes superDots {
+  0%,
+  100% {
+    -webkit-transform: scale(0, 0);
+    background-color: #3f01b0;
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+    background-color: #fff;
+  }
+}
+
+@keyframes superDots {
+  0%,
+  100% {
+    transform: scale(0, 0);
+    background-color: #3f01b0;
+  }
+  50% {
+    transform: scale(1, 1);
+    background-color: #fff;
+  }
+}
+/*Fin animación de carga*/
+
+/*Animacion tras de imagen*/
+.anime, .img-bg {
+  height: 140px;
+  width: 140px;
+}
+
+.img-bg {
+  position: absolute;
+  background-image: linear-gradient(-45deg, #34cffe 50%, #ffffff 50%);
+  border-radius: 50%;
+  filter: blur(18px);
+  z-index: -1;
+  animation: pulso 4s cubic-bezier(0, 0, 0, 0.5) infinite;
+}
+
+@keyframes pulso {
+  0% {
+    left: 65px;
+    top: 65px;
+    transform: scale(1);
+  }
+  30% {
+    left: 65px;
+    top: 65px;
+    transform: scale(1.5);
+  }
+ 70% {
+    left: 65px;
+    top: 65px;
+    transform: scale(1.8);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*Fin animación tras de imagen*/
 
 /*Animación interactiva*/
 input {
