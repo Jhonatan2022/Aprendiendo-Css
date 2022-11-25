@@ -752,7 +752,7 @@ section{
 
 .neon {
   position: relative;
-  padding: 15px 20px;
+  padding: 10px 10px;
   color: #03e9f4;
   transition: 0.5s;
   letter-spacing: 4px;
@@ -914,7 +914,7 @@ section{
   width: 150px;
   position: relative;
   transform-style: preserve-3d;
- animation: rotate 4s linear infinite;
+ animation: rotando 4s linear infinite;
 }
 
 .cube div {
@@ -949,7 +949,7 @@ section{
   transform: rotateX(-90deg) translateZ(65px) rotate(180deg);
 }
 
-@keyframes rotate {
+@keyframes rotando {
   100% {
       transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
   }
@@ -1162,8 +1162,6 @@ section{
 
 
 /*Animación dos de carga*/
-
-
 .dota {
   display: inline-block;
   width: 2.2em;
@@ -1225,6 +1223,353 @@ section{
   }
 }
 /*Fin animación de carga*/
+
+/*Animaciónes de carga*/
+.loader{
+  margin: 20px;
+}
+/* loader 1 */
+.loader1{
+  height: 75px;
+  width: 75px;
+  border-top: 3px solid #fff;
+  border-radius: 100%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin{
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform:rotate(360deg);
+  }
+}
+/* loader 2 */
+.loader2{
+  display: inline-block;
+  position: relative;
+  height: 75px;
+  width: 75px;
+}
+.loader2 div{
+  display: block;
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  border: 6px solid white;
+  border-radius: 100%;
+  border-color: white transparent transparent transparent;
+  animation: spin 1.2s cubic-bezier(.5,0,.5,1) infinite;
+}
+.loader2 div:nth-child(1){
+  animation-delay: -0.45s;
+}
+.loader2 div:nth-child(2){
+  animation-delay: -0.3s;
+}
+.loader2 div:nth-child(3){
+  animation-delay: -0.15s;
+}
+/* loader 3 */
+.loader3{
+  display: flex;
+  flex-direction: row;
+  height: 75px;
+  width: 75px;
+  justify-content: center;
+  align-items: center;
+}
+.loader3 div{
+  width: 5px;
+  background-color: white;
+  margin-right: 4px;
+  animation: bars 1s ease-in-out infinite; 
+}
+.loader3 div:nth-child(1){
+  animation-delay: 0.15s;
+}
+.loader3 div:nth-child(2){
+  animation-delay: 0.3s;
+}
+.loader3 div:nth-child(3){
+  animation-delay: 0.45s;
+}
+@keyframes bars{
+  0%,80%,100%{
+      height: 30px;
+      box-shadow: 0 0 #fff;
+  }
+  40%{
+      height: 60px;
+      box-shadow: 0 -24px #fff;
+  }
+}
+/* loader 5 */
+.loader5{
+  width: 64px;
+  height: 64px;
+  color: white;
+}
+.loader5 div{
+  transform-origin: 32px 32px;
+  animation: fade 1.2s linear infinite;
+}
+.loader5 div::after{
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 20%;
+  top: 3px;
+  left: 29px;
+  height: 14px;
+  width: 5px;
+  background-color: white;
+}
+.loader5 div:nth-child(1){
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.loader5 div:nth-child(2){
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.loader5 div:nth-child(3){
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.loader5 div:nth-child(4){
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.loader5 div:nth-child(5){
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.loader5 div:nth-child(6){
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.loader5 div:nth-child(7){
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.loader5 div:nth-child(8){
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.loader5 div:nth-child(9){
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.loader5 div:nth-child(10){
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.loader5 div:nth-child(11){
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.loader5 div:nth-child(12){
+  transform: rotate(330deg);
+}
+@keyframes fade{
+  0%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+  }
+}
+/* loader 6 */
+.loader6{
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  animation: rotate 1.2s ease-in-out infinite;
+}
+@keyframes rotate{
+  0%{
+      transform: perspective(120px) rotateY(0deg);
+  }
+  50%{
+      transform:perspective(120px) rotateX(-180deg) rotateY(0deg);
+  }
+  100%{
+      transform:perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+/* loader 7 */
+.loader7{
+  width: 70px;
+  height: 70px;
+}
+.loader7 div{
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  border-radius: 100%;
+  background-color: white;
+  animation: bounce 2s ease-in-out infinite;
+  opacity: 0.6;
+}
+.loader7 div:nth-child(1){
+  animation-delay: -1s;
+}
+@keyframes bounce{
+  0%,100%{
+      transform: scale(0.0);
+  }
+  50%{
+       transform: scale(1.0);
+  }
+}
+/* loader 8 */
+.loader8{
+  width: 70px;
+  height: 70px;
+  
+}
+.loader8::after{
+  content: '';
+  height: 0;
+  width: 0;
+  margin: 0;
+  display: block;
+  border: 35px solid #fff;
+  border-radius: 50%;
+  border-color: #fff transparent;
+  animation: load 1.2s ease-in-out infinite;
+}
+@keyframes load{
+  0%{
+      transform: rotate(0deg);
+  }
+  50%{
+      transform: rotate(180deg);
+  }
+  100%{
+      transform: rotate(-180deg);
+  }
+}
+/* loader 9 */
+.loader9{
+  width: 70px;
+  height: 70px;
+  animation: rotate2 2s linear infinite;
+}
+.loader9 div{
+  width: 60%;
+  height: 60%;
+  background-color: #fff;
+  border-radius: 100%;
+  animation: scale 2s ease-in-out infinite;
+}
+.loader9 div:nth-child(2){
+  animation-delay: -1s;
+}
+@keyframes rotate2{
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+@keyframes scale{
+  0%,100%{
+      transform: scale(0);
+  }
+  50%{
+      transform: scale(1);
+  }
+}
+/* loader 10 */
+.loader10{
+  width: 64px;
+  height: 64px;
+}
+.loader10 div{
+  transform-origin: 32px 32px;
+  animation: small-balls 1.2s cubic-bezier(0.5,0,0.5,1) infinite;
+}
+.loader10 div::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 100%;
+  
+}
+.loader10-container{
+  position: relative;
+}
+.loader10 div:nth-child(1){
+  animation-delay: -0.035s;
+}
+.loader10 div:nth-child(2){
+  animation-delay: -0.070s;
+}
+.loader10 div:nth-child(3){
+  animation-delay: -0.105s;
+}
+.loader10 div:nth-child(4){
+  animation-delay: -0.140s;
+}
+.loader10 div:nth-child(5){
+  animation-delay: -0.175s;
+}
+.loader10 div:nth-child(6){
+  animation-delay: -0.2s;
+}
+.loader10 div:nth-child(7){
+  animation-delay: -0.235s;
+}
+.loader10 div:nth-child(8){
+  animation-delay: -0.270s;
+}
+.loader10 div:nth-child(1)::after{
+  top: 50px;
+  left: 50px;
+}
+.loader10 div:nth-child(2)::after{
+  top: 54px;
+  left: 45px;
+}
+.loader10 div:nth-child(3)::after{
+  top: 57px;
+  left: 39px;
+}
+.loader10 div:nth-child(4)::after{
+  top: 58px;
+  left: 32px;
+}
+.loader10 div:nth-child(5)::after{
+  top: 57px;
+  left: 25px;
+}
+.loader10 div:nth-child(6)::after{
+  top: 54px;
+  left: 19px;
+}
+.loader10 div:nth-child(7)::after{
+  top: 49px;
+  left: 14px;
+}
+.loader10 div:nth-child(8)::after{
+  top: 44px;
+  left: 10px;
+}
+@keyframes small-balls{
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+/*Fin animaciones de carga*/
 
 /*Animacion tras de imagen*/
 .anime, .img-bg {
