@@ -730,13 +730,13 @@ section{
 }
 
 #github {
-  font-size: 4em;
+  font-size: 3em;
   background-color: #18191f;
   color: #fff;
   box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080, 2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080;
   border-radius: 29px;
   padding: 11px 19px;
-  margin-top: 0.2em;
+  margin-top: 0.4em;
   margin-right: -1em;
   animation: github 3s linear infinite;
   text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
@@ -758,6 +758,7 @@ section{
   transition: 0.5s;
   letter-spacing: 4px;
   overflow: hidden;
+  margin-top: 1em;
   margin-right: 100px;
 }
 
@@ -1303,12 +1304,12 @@ section{
 }
 /* loader 5 */
 .loader5{
-  width: 64px;
-  height: 64px;
+  width: 70px;
+  height: 140px;
   color: white;
 }
 .loader5 div{
-  transform-origin: 32px 32px;
+  transform-origin: 36px 80px;
   animation: fade 1.2s linear infinite;
 }
 .loader5 div::after{
@@ -1318,8 +1319,8 @@ section{
   border-radius: 20%;
   top: 3px;
   left: 29px;
-  height: 14px;
-  width: 5px;
+  height: 50px;
+  width: 15px;
   background-color: white;
 }
 .loader5 div:nth-child(1){
@@ -1379,8 +1380,8 @@ section{
 }
 /* loader 6 */
 .loader6{
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   background-color: white;
   animation: rotate 1.2s ease-in-out infinite;
 }
@@ -1397,12 +1398,12 @@ section{
 }
 /* loader 7 */
 .loader7{
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
 }
 .loader7 div{
-  height: 45px;
-  width: 45px;
+  height: 100px;
+  width: 100px;
   position: absolute;
   border-radius: 100%;
   background-color: white;
@@ -1422,8 +1423,8 @@ section{
 }
 /* loader 8 */
 .loader8{
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   
 }
 .loader8::after{
@@ -1432,7 +1433,7 @@ section{
   width: 0;
   margin: 0;
   display: block;
-  border: 35px solid #fff;
+  border: 50px solid #fff;
   border-radius: 50%;
   border-color: #fff transparent;
   animation: load 1.2s ease-in-out infinite;
@@ -1450,8 +1451,8 @@ section{
 }
 /* loader 9 */
 .loader9{
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   animation: rotate2 2s linear infinite;
 }
 .loader9 div{
@@ -1493,14 +1494,10 @@ section{
   content: '';
   display: block;
   position: absolute;
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
   background-color: #fff;
-  border-radius: 100%;
-  
-}
-.loader10-container{
-  position: relative;
+  border-radius: 100%; 
 }
 .loader10 div:nth-child(1){
   animation-delay: -0.035s;
