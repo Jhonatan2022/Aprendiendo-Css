@@ -332,6 +332,86 @@ section{
 
 /*Final de contenedor de información*/
 
+
+/*Carta de instagram animada*/
+.card-wrap{
+  height: 230px;
+  width: 230px;
+  border-radius: 15px;
+  perspective: 1000px;
+}
+.card{
+  margin-left: 1em;
+  margin-top: 0.5em;
+  height: inherit;
+  transition: transform 1s;
+  transform-style: preserve-3d; 
+}
+.card-front,.card-back{
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  backface-visibility: hidden;
+  border-radius: 0.37rem;
+}
+.card-front{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f09433; 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+}
+.card-back{
+  background-color: #ccd6dd00;
+  transform: rotateY(180deg);
+}
+.instagram{
+  margin-left: 4.5em;
+  width: 40%;
+  transform: rotate(180deg);
+}
+.card-back .user img{
+  width: 60%;
+  height: 8em;
+  border-radius: 50%;
+  margin: 1rem 2.5rem 0;
+  box-shadow: 3px 3px 10px #66757F;
+}
+.card-wrap:hover .card{
+  transform: rotateY(180deg);
+}
+.user-info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.user-info .username{
+  font-size: 1.3rem;
+  margin-bottom: 0.5em;
+  color: white;
+}
+.follow-btn{
+  padding: 0.5rem;
+  width: 9rem;
+  color: #E1E8ED;
+  background-color: #292F33;
+  border: 0;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 0.0625rem;
+  border-radius: 0.27rem;
+  margin: 0 auto;
+}
+.follow-btn:hover{
+  cursor: pointer;
+  background: #f09433; 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  color: white;
+}
+/*Final carta de instagram animada*/
+
 /*Fantasma animado*/
 .fantasma{
   width: 190px;
