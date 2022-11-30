@@ -1861,3 +1861,118 @@ input + label:active .anim {
   box-shadow: inset 18px -20px 20px 15px #1818186b;
 }
 /*Fin animación de billar*/
+
+/*Animación de gato*/
+.circle {
+  position: relative;
+  background: #8754ff;
+  width: 150px;
+  top: -1em;
+  height: 150px;
+  border-radius: 50%;
+  justify-content: center;
+  display: flex;
+  box-shadow: 2vmin -1vmin 5vmin 8px #ff8f8f,
+   -3vmin 1vmin 5vmin 8px #494eff;
+}
+.cat {
+  position: relative;
+    background: black;
+    height: 10vmin;
+    width: 9vmin;
+    border-radius: 90% 90% 60% 60%;
+    top: 5vmin;
+}
+.cat::after {
+  content: '';
+  position: absolute;
+  background: black;
+  height: 8vmin;
+  width: 8vmin;
+  border-radius: 80% 80% 70% 70%;
+  top: -5vmin;
+  left: 0.7vmin;
+}
+.cat::before {
+  content: '';
+  position: absolute;
+  background: black;
+  height: 13vmin;
+  width: 14vmin;
+  border-radius: 60% 60% 80% 80%;
+  top: 5vmin;
+  left: -2.6vmin;
+  z-index: 1;
+}
+.ears {
+  position: relative;
+  height: 0;
+  width: 0;
+  top: -9vmin;
+  left: 0.6vmin;
+  transform: rotate(-20deg);
+  border-left: 2vmin solid transparent;
+  border-right: 2vmin solid transparent;
+  border-bottom: 5vmin solid black;
+}
+.ears::after {
+  position: absolute;
+    content: '';
+    top: 2vmin;
+    left: 2.3vmin;
+    transform: rotate(40deg);
+    border-left: 2vmin solid transparent;
+    border-right: 2vmin solid transparent;
+    border-bottom: 5vmin solid black;
+}
+.tail {
+  position: relative;
+  background: black;
+  height: 8vmin;
+  width: 2vmin;
+  top: 11vmin;
+  left: 3vmin;
+  animation: sway 3s ease-in-out infinite;
+  z-index: 1;
+}
+.tail::before {
+  content: '';
+  position: absolute;
+  background: transparent;
+  height: 8vmin;
+  width: 1vmin;
+  left: -2px;
+  top: 3vmin;
+  border-left: 3vmin solid black;
+  transform: rotate(345deg);
+  border-radius: 80%;
+}
+.gato {
+  position: relative;
+  height: 10vmin;
+  width: 18vmin;
+  background: #000000;
+  border-radius: 50%;
+  opacity: 0.5;
+  top: -2vmin;
+  left: -4vmin;
+}
+@keyframes sway {
+  25% {
+    transform: rotate(0deg) translatex(0vmin);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: rotate(-45deg) translatex(2vmin);
+    transform-origin: 0 0;
+  }
+  75% {
+    transform: rotate(45deg) translatex(-2vmin);
+    transform-origin: 0 0;
+  }
+  100% {
+    transform: rotate(0deg) translatex(0vmin);
+    transform-origin: 0 0;
+  }
+}
+/*Final animación de gato*/
