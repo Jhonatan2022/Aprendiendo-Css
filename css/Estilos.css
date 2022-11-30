@@ -253,17 +253,16 @@ section{
   width: 250px;
   height: 250px;
   float: left;
-  margin-top: 2em;
+  border-radius: 15px;
+  margin-bottom: 2em;
   margin-left: 1em;
 }
 
 @media screen and (max-width: 470px) {
   .contenedor {
-    width: 270px;
-    height: 270px;
     float: left;
-    margin-top: 2em;
-    margin-left: 2em;
+    margin-bottom: 2em;
+    margin-left: 4em;
   }
 }
 
@@ -1822,3 +1821,43 @@ input + label:active .anim {
   }
 }
 /*Fin animación interactiva*/
+
+/*Animación de billar*/
+.billar {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  top: -6.5em;
+  left: 2em;
+  margin: auto;
+  border-radius: 50%;
+  background: rgb(0, 0, 0);
+}
+
+.numero{
+  position: relative;
+  top: 0.5em;
+  margin: 0px 50px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  box-shadow: -15px -20px 0 0 rgb(255, 255, 255,0.2) inset,
+  -15px -20px 8px 0 rgba(0, 0, 0, 0.52) inset;
+}
+
+.sombra {
+  position: relative;
+  border-radius: 50%;
+  top: 9.5em;
+  left: 1em;
+  height: 50px;
+  box-shadow: inset 18px -20px 20px 15px #1818186b;
+}
+/*Fin animación de billar*/
