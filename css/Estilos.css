@@ -2083,3 +2083,44 @@ input + label:active .anim {
   }
 }
 /*Final animación de atardecer*/
+
+/*Botton 3b con vuelta*/
+.vuelta{
+  top: 1em;
+  left: 1em;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+  bottom: 20px;
+  border:none;
+  line-height: 42px;
+}
+.vuelta span {
+  background: #4b0081;
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-radius: 5px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all .3s;
+}
+.vuelta span:nth-child(1) {
+  transform: rotateX(90deg);
+  background-color: #ff0000;
+  transform-origin: 50% 50% -20px;
+}
+.vuelta span:nth-child(2) {
+  transform: rotateX(0deg);
+  background-color: #20778b;
+  transform-origin: 50% 50% -20px;
+}
+.vuelta:hover span:nth-child(1) {
+  transform: rotateX(0deg);
+}
+.vuelta:hover span:nth-child(2) {
+  transform: rotateX(-90deg);
+}
+/*Fin boton 3d con vuelta*/
