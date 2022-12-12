@@ -15,6 +15,7 @@
   --gris: rgb(202, 202, 202);
   --violeta: rgb(244, 54, 244);
   --degradado: linear-gradient(#e66465, #9198e5);
+  --morado: rgb(89, 0, 89);
 }
 /*Final de variables de colores*/
 
@@ -2124,3 +2125,52 @@ input + label:active .anim {
   transform: rotateX(-90deg);
 }
 /*Fin boton 3d con vuelta*/
+
+/*Boton con .swin*/
+
+.swin {
+  width: 6em;
+  height: 2.6em;
+  position: absolute;
+  overflow: hidden;
+  border: 2px solid var(--morado);
+  transition: color .5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: bold;
+  left: 7.5em;
+  top: 0.5em;
+  color: var(--morado);
+}
+ 
+ .swin:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--morado);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+ }
+ 
+ .swin:hover {
+  color: #fff;
+ }
+ 
+ .swin:before {
+  top: 100%;
+  left: 100%;
+  transition: all .7s;
+ }
+ 
+ .swin:hover:before {
+  top: -30px;
+  left: -30px;
+ }
+ 
+ .swin:active:before {
+  background: #3a0ca3;
+  transition: background 0s;
+ }
+/*Fin animación boton con .swin*/
