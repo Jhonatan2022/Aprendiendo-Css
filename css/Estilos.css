@@ -1853,7 +1853,7 @@ input + label:active .anim {
   -15px -20px 8px 0 rgba(0, 0, 0, 0.52) inset;
 }
 
-.sombra {
+.sombraa {
   position: relative;
   border-radius: 50%;
   top: 9.5em;
@@ -2462,3 +2462,362 @@ input + label:active .anim {
   }
 }
 /*Fin animación de agua*/
+
+/*Animación de personaje*/
+.torso {
+  position: relative;
+  background: #d5cfaf;
+  height: 16vmin;
+  width: 18vmin;
+  left: 1em;
+  top: 7em;
+  border-radius: 47% 53% 51% 49% / 70% 70% 30% 30%;
+  transform: scale(0.9);
+  z-index: -1;
+  animation: bounce 1.5s infinite;
+}
+/*torso eyes*/
+.torso::after {
+  content: '';
+  position: absolute;
+  background: #252527;
+  height: 5vmin;
+  width: 3vmin;
+  border-radius: 50%;
+  top: 6vmin;
+  left: 4vmin;
+  box-shadow: 8vmin 0 #252527;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: blink 6s infinite;
+}
+
+/*head shadow*/
+.torso::before {
+  content: '';
+  position: absolute;
+  background: #000000;
+  opacity: 0.7;
+  height: 4vmin;
+  width: 10vmin;
+  border-radius: 50%;
+  left: 3.5vmin;
+  transform: rotate(350deg);
+}
+
+.skirt {
+  position: relative;  
+  background: #d5cfaf;
+  width: 7vmin; 
+  height: 5vmin; 
+  border-radius: 0 0 18vmin 0;
+  box-shadow: 2vmin 2vmin #252527;
+  top: 12.5vmin;
+  left: -1.3vmin;
+  transform: rotate(21deg);
+  z-index: -6;
+}
+
+.skirt::after {
+  content: '';
+  position: absolute;
+  background: #d5cfaf;
+  width: 7vmin; 
+  height: 6vmin; 
+  border-radius: 0 0 18vmin 0;
+  box-shadow: 
+    1vmin 0 #d5cfaf,
+    0.5vmin 2.5vmin #252527;
+  left: 4vmin;
+}
+
+#right {
+  transform: scalex(-1) rotate(35deg);
+  left: 12.9vmin;
+  top: 7.4vmin;  
+  z-index: -6;
+}
+
+.head {
+  position: relative;
+  background: #d5cfaf;
+  height: 15vmin;
+  width: 20vmin;
+  border-radius: 47% 53% 51% 49% / 70% 70% 30% 30%;
+  top: -16vmin;
+  transform: rotate(-10deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: wiggle 1.5s infinite;
+}
+
+/*mimikyu eyes*/
+.head::after {
+  content: '';
+  position: absolute;
+  background: #252527;
+  height: 5vmin;
+  width: 4vmin;
+  border-radius: 50%;
+  /*top: 15vmin;*/
+  left: 4vmin;
+}
+
+.head::before {
+  content: '';
+  position: absolute;
+  background: #252527;
+  height: 4vmin;
+  width: 3vmin;
+  border-radius: 50%;
+  /*top: 14vmin;*/
+  left: 11vmin;
+}
+
+.cheeks {
+  position: relative;
+  background: var(--rojo);
+  height: 3vmin;
+  width: 0.5vmin;
+  border-radius: 30%;
+  transform: rotate(-30deg);
+  box-shadow: 2vmin 2vmin var(--rojo);
+  top: 9.5vmin;
+  left: -8.5vmin;
+}
+
+.cheeks::after {
+  content: '';
+  position: absolute;
+  background: transparent;
+  height: 3vmin;
+  width: 1vmin;
+  border-radius: 30%;
+  transform: rotate(20deg);
+  left: 3vmin;
+  top: 3vmin;
+  box-shadow: -2.5vmin -1.5vmin var(--rojo);
+}
+
+#second {
+  transform: scalex(-1) rotate(-15deg);
+  top: 7vmin;
+  left: 7.5vmin;
+}
+
+.mouth {
+  position: relative;
+  background: #252527;
+  height: 1vmin;
+  width: 1.5vmin;
+  border-radius: 20%;  
+  transform: rotate(18deg);
+  box-shadow: 6.7vmin -1.8vmin #252527, 
+              9.4vmin -2.7vmin #252527;
+  top: 8.5vmin;
+  left: -6vmin;
+}
+
+.mouth::after {
+  content: '';
+  position: absolute;
+  background: #252527;
+  height: 1vmin;
+  width: 1.5vmin;
+  border-radius: 30%;  
+  transform: rotate(-50deg);
+  box-shadow: 4.8vmin 2.1vmin #252527, 
+              7.2vmin 3.2vmin #252527;
+  left: 0.9vmin;
+  top: 1vmin;
+}
+
+#shrink {
+  transform: scale(0.8) rotate(18deg) translatex(1.5vmin) translatey(-1vmin);
+}
+
+.ojos {
+  position: relative;
+  background: #d5cfaf;
+  height: 14vmin;
+  width: 4vmin;  
+  border-radius: 50% 50% 80% 0%;
+  top: -5vmin;
+  left: 8vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ojos::after {
+  content: '';
+  position: absolute;
+  background: #d5cfaf;
+  height: 10vmin;
+  width: 4vmin;
+  border-radius: 50% 50% 80% 0%;
+  left: -14vmin;
+  top: -3vmin;
+  transform: rotate(-70deg);
+  z-index: -1;
+}
+
+.ear-end {
+  position: relative;
+  background: #252527;
+  height: 3vmin;
+  width: 8vmin;
+  border-radius: 50%;
+  top: -6vmin;
+  left: -2.2vmin;
+  transform: rotate(31deg);
+}
+
+.ear-end::after {
+  content: '';
+  position: absolute;
+  background: #252527;
+  height: 3vmin;
+  width: 9vmin;
+  border-radius: 50%;
+  left: -13vmin;
+  top: 13.7vmin;
+  transform: rotate(265deg);
+  z-index: 1;
+}
+
+.ear-end::before {
+  content: '';
+  position: absolute;
+  background: #252527;
+  height: 2.5vmin;
+  width: 3vmin;
+  border-radius: 18vmin 18vmin 18vmin 0;
+  top: 11.7vmin;
+  left: -9vmin;
+}
+
+.ear-start {
+  position: relative;
+  background: #252527;
+  height: 3vmin;
+  width: 2vmin;
+  border-radius: 18vmin 18vmin 0 18vmin;
+  top: -6.3vmin;
+  left: 0.5vmin;
+  display: flex;
+  flex-direction: row;
+}
+
+.ear-start::after {
+  content: '';
+  position: absolute;
+  background: #252527;
+  height: 3vmin;
+  width: 2vmin;
+  border-radius: 0 18vmin 18vmin 0;
+  left: -1vmin;
+}
+
+.ear-start::before {
+  content: '';
+  position: absolute;
+  background: #252527;
+  height: 2vmin;
+  width: 3vmin;
+  border-radius: 0 0 18vmin 18vmin;
+  left: -18vmin;
+  top: 0.6vmin;
+  transform: rotate(15deg);  
+}
+
+.cola {
+  position: relative;
+  background: #252527;
+  height: 6vmin;
+  width: 3vmin;    
+  border-radius: 0 0 0 18vmin;
+  transform: rotate(60deg);
+  top: 21vmin;
+  left: 1vmin;
+  animation: cola 1.5s infinite;
+}
+
+.cola::after {
+  content: '';
+  position: absolute;
+  background: #252527;
+  height: 3vmin;
+  width: 5vmin;  
+  transform: rotate(-40deg); 
+  top: -2.5vmin;
+  left: 0.3vmin;
+}
+
+.cola::before {
+  content: '';
+  position: absolute;
+  border-left: 3vmin solid transparent;
+  border-right: 1vmin solid transparent;
+  border-top: 8vmin solid #252527;
+  transform: rotate(-50deg);
+  top: -7vmin;
+}
+
+.decolas {
+  position: relative;
+  background: #252527;
+  height: 3vmin;
+  width: 4vmin;  
+  top: -7vmin;
+}
+
+.sombra {
+  position: relative;
+  background: #4f4f6b;
+  height: 5vmin;
+  width: 28vmin;
+  border-radius: 50%; 
+  z-index: -2;
+  top: 16vmin;
+  animation: expand 1.5s infinite;
+}
+
+@keyframes cola {
+  50% {
+    transform: translatex(5vmin) translatey(-2.5vmin) rotate(40deg);
+  }
+}
+
+@keyframes wiggle {
+  50% {
+    transform: translate(-0.5vmin, -1vmin);
+  }
+}
+
+@keyframes bounce {
+  50% {
+    transform: translatey(-1vmin) scale(0.9);
+  }
+}
+
+@keyframes blink {
+  0%, 9%, 11%, 19%, 21%, 69%, 71%, 100% { 
+    transform: scaley(1);
+  }
+  10%, 20%, 70% {
+    transform: scaley(0);
+  }
+}
+
+@keyframes expand {
+  50% {
+    transform: scalex(1.2);
+    transform-origin: center;
+  }
+}
+/*Fin animación de personaje*/
