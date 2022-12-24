@@ -2821,3 +2821,177 @@ input + label:active .anim {
   }
 }
 /*Fin animación de personaje*/
+
+/*Animación de boton*/
+:root{
+  --main_color : #C24F3C ;
+  --sub_color : #D3B171  ;
+  --base_color : #F7F3EA ;
+  --accent_color : #8EC0C9 ;
+}
+
+.buttonn{
+  position : relative ;
+  display : flex ;
+  justify-content : center ;
+  align-items : center ;
+  width: 160px;
+  height: 50px;
+  left: 3em;
+  top: 1.5em;
+  text-decoration : none ;
+  font-size : 14px ;
+  font-family : serif ; 
+  font-weight : bold ;
+  box-sizing : border-box ;
+  border : solid 3px var(--main_color) ;
+  color : var(--main_color) ;
+  background : var(--base_color) ;
+}
+.buttonn::before,
+.buttonn::after{
+  content : '' ;
+  position : absolute ;
+  z-index : 3 ;
+  right : 24px ;
+  width : 10px ;
+  height : 3px ;
+  background : var(--main_color) ;
+  transition : all .2s ease ;
+}
+.buttonn::before{
+  top : calc( 50% - 4px ) ;
+  transform : skew( 45deg ) ; 
+}
+.buttonn::after{
+  bottom : calc( 50% - 4px ) ;
+  transform : skew( -45deg ) ; 
+}
+.button__cloud1,
+.button__cloud2{
+  position : absolute ;
+  z-index : 4 ;
+  width : 8px ;
+  height : 8px ;
+  background : var(--sub_color) ;
+  transition : all ease-in-out .6s ;
+  opacity : 0 ;
+}
+.button__cloud1{
+  top : -4px ;
+  left : -48px ;
+}
+.button__cloud2{
+  bottom : -4px ;
+  right : -48px ;
+}
+.button__cloud1::before,
+.button__cloud1::after,
+.button__cloud2::before,
+.button__cloud2::after{
+  content : '' ;
+  position : absolute ;
+  width : 48px ;
+  height : 8px ;
+  border-radius : 4px ;
+  background : var(--sub_color) ;
+}
+.button__cloud1::before{
+  top : -8px ;
+  left : -16px ;
+}
+.button__cloud1::after{
+  bottom : -8px ;
+  right : -12px ;
+}
+.button__cloud2::before{
+  top : -8px ;
+  left : -24px ;
+}
+.button__cloud2::after{
+  bottom : -8px ;
+  right : -24px ;
+}
+.button__inner{
+  position : relative ;
+  display : flex ;
+  justify-content : center ;
+  align-items : center ;
+  width : calc( 100% - 4px ) ;
+  height : calc( 100% - 4px ) ;
+  box-sizing : border-box ;
+  border : solid 1px var(--main_color) ;
+}
+.button__inner::before{
+  content : '' ;
+  position : absolute ;
+  z-index : 2 ;
+  top : 0 ;
+  right : 2px ;
+  bottom : 0 ;
+  margin : auto 0 ;
+  width : 0 ;
+  height : calc( 100% - 4px ) ;
+  background : var(--main_color) ;
+}
+.button__pattern{
+  position : absolute ;
+  z-index : 1 ;
+  top : 0 ;
+  left : 2px ;
+  bottom : 0 ;
+  margin : auto 0 ;
+  width : 40px ;
+  height : calc( 100% - 4px ) ;
+  opacity : 0 ;
+  background-color : var(--accent_color) ;
+  background-image :  repeating-linear-gradient(45deg, var(--base_color) 25%, transparent 25%, transparent 75%, var(--base_color) 75%, var(--base_color)), repeating-linear-gradient(45deg, var(--base_color) 25%, var(--accent_color) 25%, var(--accent_color) 75%, var(--base_color) 75%, var(--base_color));
+  background-position : 0 0 , 8px 8px ;
+  background-size : 16px 16px ;
+}
+.button__text{
+  position : relative ;
+  z-index : 3 ;
+  text-transform: uppercase;
+  transition : all .6s ease ;
+}
+.buttonn:hover::before,
+.buttonn:hover::after{
+  background : var(--base_color) ;
+}
+.buttonn:hover .button__cloud1{
+  left : -8px ;
+  opacity : 1 ;
+}
+.buttonn:hover .button__cloud2{
+  right : -8px ;
+  opacity : 1 ;
+}
+.buttonn:hover .button__text{
+  color : var(--base_color) ;
+}
+.buttonn:hover .button__inner::before{
+  animation : bg 1.2s ease ;
+  animation-fill-mode : forwards ;
+}
+.buttonn:hover .button__inner::before{
+  animation : bg 1.2s ease ;
+  animation-fill-mode : forwards ;
+}
+.buttonn:hover .button__pattern{
+  animation : pattern 1.2s ease ;
+  animation-fill-mode : forwards ;
+}
+@keyframes bg {
+  0%  { width : 0 ; }
+  30% { width : calc( 100% - 4px ) ; }
+  50% { width : calc( 100% - 4px ) ; }
+  100%{ width : calc( 100% - 40px - 6px ) ; }
+}
+@keyframes pattern {
+  0%  { opacity : 0 ; }
+  30% { opacity : 0 ; }
+  31% { opacity : 1 ; }
+  100%{ opacity : 1 ; }
+}
+/*Fin animación de boton*/
