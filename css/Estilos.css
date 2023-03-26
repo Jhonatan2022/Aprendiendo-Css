@@ -340,7 +340,7 @@ section{
   border-radius: 15px;
   perspective: 1000px;
 }
-.card{
+.carta{
   margin-left: 1em;
   margin-top: 0.5em;
   height: inherit;
@@ -378,7 +378,7 @@ section{
   margin: 1rem 2.5rem 0;
   box-shadow: 3px 3px 10px #66757F;
 }
-.card-wrap:hover .card{
+.card-wrap:hover .carta{
   transform: rotateY(180deg);
 }
 .user-info{
