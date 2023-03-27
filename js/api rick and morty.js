@@ -4,18 +4,15 @@
 const apiRick = async (pagina) => {
   // Url de la api con el parametro de la pagina
   let url = `https://rickandmortyapi.com/api/character/?page=` + pagina;
-  let url2 = 'https://rickandmortyapi.com/api/location/';
 
   // Obtener los datos de la api
   const api = await fetch(url);
-  const api2 = await fetch(url2);
 
   // Convertir los datos a json
   const data = await api.json();
-  const data2 = await api2.json();
 
   // Imprimir los datos en consola
-  console.log(data, data2);
+  console.log(data);
 
   // Imprimir los datos en cada elemento del html
   divRes = document.querySelector('#resultado');
@@ -24,7 +21,7 @@ const apiRick = async (pagina) => {
   divRes.innerHTML = ""
 
   // Imprimir los datos en el html
-  data.results.map(item => {
+  data.results.map (item => {
     // Crear un div para cada personaje
     divItem = document.createElement('div')
 
@@ -42,20 +39,13 @@ const apiRick = async (pagina) => {
         <li class="list-group-item"><i class="fa-solid fa-clock-rotate-left" ></i> Estado del especimen: ${item.status}</li>
         <li class="list-group-item"><i class="fa-solid fa-rocket" ></i> ${item.type}</li>
       </ul>
-      <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
     </div> 
     `
     // Insertar el div en el html por cada personaje que vaya recorriendo
     divRes.appendChild(divItem);
-   
   });
+
 };
-
-
-
 
 // Funcion para imprimir los datos de la api
 apiRick(1);
