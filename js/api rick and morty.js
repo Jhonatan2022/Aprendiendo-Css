@@ -4,15 +4,19 @@
 const apiRick = async (pagina) => {
   // Url de la api con el parametro de la pagina
   let url = `https://rickandmortyapi.com/api/character/?page=` + pagina;
+  let url2 = `https://rickandmortyapi.com/api/location`;
 
   // Obtener los datos de la api
   const api = await fetch(url);
+  const api2 = await fetch(url2);
 
   // Convertir los datos a json
   const data = await api.json();
+  const data2 = await api2.json();
 
   // Imprimir los datos en consola
   console.log(data);
+  console.log(data2);
 
   // Imprimir los datos en cada elemento del html
   divRes = document.querySelector('#resultado');
@@ -22,6 +26,10 @@ const apiRick = async (pagina) => {
 
   // Imprimir los datos en el html
   data.results.map (item => {
+
+    // Buscar el nombre de la dimension en la api de locations
+    const item2 = data2.results.find(l => l.url2 === item.origin.url2);
+    
     // Crear un div para cada personaje
     divItem = document.createElement('div')
 
@@ -37,7 +45,7 @@ const apiRick = async (pagina) => {
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><i class="fa-solid fa-hashtag" ></i> Especimen: ${item.id}</li> 
         <li class="list-group-item"><i class="fa-solid fa-clock-rotate-left" ></i> Estado del especimen: ${item.status}</li>
-        <li class="list-group-item"><i class="fa-solid fa-rocket" ></i> ${item.type}</li>
+        <li class="list-group-item"><i class="fa-solid fa-rocket" ></i> ${item2.dimension }</li>
       </ul>
     </div> 
     `
