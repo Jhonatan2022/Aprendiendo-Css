@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #b7b7b7;
+  transition: 0.3s ease all;
+}
+body.dark {
+  background: #111;
+}
+a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav {
+  background: #fefefe;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  transition: 0.3s ease all;
+  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+}
+body.dark nav {
+  background: #222;
+  box-shadow: 10px 10px 20px rgba(90, 90, 90, 0.9);
+}
+body.dark nav a {
+  color: #c8c8c8;
+}
+body.dark nav a:hover {
+  color: #fefefe;
+}
+nav .enlaces {
+  display: flex;
+  align-items: center;
+}
+nav .enlaces a {
+  margin-right: 40px;
+}
+nav .enlaces a:hover {
+  color: #707070;
+}
+.modo {
+  background: #343d5b;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+}
+.modo::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #f04545;
+  right: unset;
+  border-radius: 100px;
+  transition: 0.3s ease all;
+}
+body.dark .modo::after{
+    background: #fff;
+}
+.modo.encendido {
+  background: #ff0000;
+}
+.modo.encendido::after {
+  right: 0;
+  left: unset;
+}
+.modo span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  color: #fff;
+  padding: 0 0 0 7px;
+}
+.opinion {
+  margin-top: 100px;
+  text-align: center;
+}
+body.dark .opinion .heading {
+  color: #c8c8c8;
+}
+.opinion .row {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 40px 0;
+}
+.opinion .row .columns {
+  background: #fefefe;
+  width: 300px;
+  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+  border-radius: 10px;
+  margin: auto;
+}
+body.dark .opinion .row .columns {
+  background: #ff0000;
+  color: #fefefe;
+  box-shadow: 10px 10px 20px rgba(250, 250, 250, 0.16);
+}
