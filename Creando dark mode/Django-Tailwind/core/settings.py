@@ -40,7 +40,31 @@ INSTALLED_APPS = [
 
     # Registramos nuestr aplicación
     'app',
+
+    # Importamos tailwind
+    'tailwind',
+
+    # Importamos la aplicación de configuración de tailwind
+    'theme',
+
+    # Incluimos django_browser_reload para que se recargue el navegador cuando se haga un cambio
+    'django_browser_reload',
 ]
+
+# Registramos la aplicación de tailwind para su configuración
+TAILWIND_APP_NAME = 'theme'
+
+
+# Configuración la dirección ips de tailwind permitidas para el acceso al panel de administración
+INTERNAL_IPS = [
+
+    # Configuración de la dirección ip de acceso al panel de administración
+    '127.0.0.1',
+]
+
+# Configuración de la dirección de nuestro npm para la compilación de tailwind
+# Ponemos la direccion de npm para que pueda ejecutar tailwind
+NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
 
 
 MIDDLEWARE = [
@@ -51,6 +75,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    # Incluimos el middleware de django_browser_reload para que se recargue el navegador cuando se haga un cambio
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = 'core.urls'

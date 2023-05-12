@@ -21,4 +21,7 @@ urlpatterns = [
 
     # Incluimos las rutas de nuestra aplicación
     path('', include('app.urls')),
+
+    # Incluimos __reload__ para que se recargue el navegador cuando se haga un cambio
+    path('__reload__/', include('django_browser_reload.urls')),
 ]
