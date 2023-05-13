@@ -6,6 +6,10 @@
  */
 
 module.exports = {
+
+    // Importamos dark mode como clase por defecto para que no se vea el cambio de color al cargar la página
+    darkMode: 'class',
+
     content: [
         /**
          * HTML. Paths to Django template files that will contain Tailwind CSS classes.
