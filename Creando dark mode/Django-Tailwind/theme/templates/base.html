@@ -1,22 +1,21 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="{% if is_dark_theme %} dark {% endif %}" >
 	<head>
     <title>Django Tailwind</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<!-- Fonts Awesome-->
+		<script src="https://kit.fontawesome.com/f21459c29e.js" crossorigin="anonymous"></script>
 		{% tailwind_css %}
 	</head>
 
-	<body class="bg-gray-50 font-serif leading-normal tracking-normal">
-		<div class="container mx-auto">
-			<section class="flex items-center justify-center h-screen">
-				<h1 class="text-5xl">Django + Tailwind = ❤️</h1>
-				<br>
-				{% block content %}
-				{% endblock content %}
-			</section>
+	<body class="bg-gray-50 dark:bg-slate-700 text-black dark:text-gray-50">
+		{% include 'navbar.html' %}
+		<div class="container mx-auto pt-8">
+			{% block content %} {% endblock content %}
 		</div>
 	</body>
 </html>

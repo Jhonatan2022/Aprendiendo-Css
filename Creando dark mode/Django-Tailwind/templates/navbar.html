@@ -1,16 +1,20 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- Fonts Awesome-->
-    <script src="https://kit.fontawesome.com/f21459c29e.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
-</body>
-</html>
+<!--Navbar con las clases de tailwind-->
+<nav class="flex justify-between items-center h-16 bg-slate-400 dark:bg-slate-900 text-gray-900 dark:text-gray-100 px-4">
+    <ul class="flex">
+        <li class="px-4">
+            <a href="{% url 'app:main' %}" class="hover:text-zinc-400">Posts</a>
+        </li>
+        <li class="px-4">
+            <a href="" class="hover:text-zinc-400">Hello word</a>
+        </li>
+    </ul>
+    <div>
+        <a href="{% url 'change-theme' %}" class="bg-gray-100 px-4 py-2 rounded-xl hover:bg-gray-300 duration-300 dark:bg-slate-600">
+            {% if is_dark_theme %}
+            <i class="fa-solid fa-sun"></i>
+            {% else %}
+            <i class="fa-solid fa-moon"></i>
+            {% endif %}
+        </a>
+    </div>
+</nav>

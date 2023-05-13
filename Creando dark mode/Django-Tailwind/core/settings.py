@@ -85,7 +85,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # Añadimos la ruta de la carpeta templates
+        # Añadimos la ruta de la carpeta templates para que Django pueda encontrar los archivos html
         'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -94,6 +94,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                # Incluimos el tema de persona que hemos creado
+                'theme.context_processors.theme',
             ],
         },
     },
