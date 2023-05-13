@@ -1,5 +1,7 @@
 # Dark mode con Django y Tailwind
 
+![image](https://github.com/Jhonatan2022/Aprendiendo-Css/assets/101368711/063ea72b-4629-4171-8193-c117ba255aae)
+![image](https://github.com/Jhonatan2022/Aprendiendo-Css/assets/101368711/163ebbbd-1b9a-4e1e-b93b-7eb5dfe1b72a)
 
 
 # Requisitos 
