@@ -19,19 +19,18 @@ const apiRick = async (pagina) => {
   console.log(data2);
 
   // Imprimir los datos en cada elemento del html
-  divRes = document.querySelector('#resultado');
+  divRes = document.querySelector("#resultado");
 
   // Realizamos el cambia de pagina con el boton
-  divRes.innerHTML = ""
+  divRes.innerHTML = "";
 
   // Imprimir los datos en el html
-  data.results.map (item => {
-
+  data.results.map((item) => {
     // Buscar el nombre de la dimension en la api de locations
-    const item2 = data2.results.find(l => l.url2 === item.origin.url2);
-    
+    const item2 = data2.results.find((l) => l.url2 === item.origin.url2);
+
     // Crear un div para cada personaje
-    divItem = document.createElement('div')
+    divItem = document.createElement("div");
 
     // Agregarle la clase item e insertar el div en el html
     divItem.innerHTML = `
@@ -45,14 +44,13 @@ const apiRick = async (pagina) => {
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><i class="fa-solid fa-hashtag" ></i> Especimen: ${item.id}</li> 
         <li class="list-group-item"><i class="fa-solid fa-clock-rotate-left" ></i> Estado del especimen: ${item.status}</li>
-        <li class="list-group-item"><i class="fa-solid fa-rocket" ></i> ${item2.dimension }</li>
+        <li class="list-group-item"><i class="fa-solid fa-rocket" ></i> ${item2.dimension}</li>
       </ul>
     </div> 
-    `
+    `;
     // Insertar el div en el html por cada personaje que vaya recorriendo
     divRes.appendChild(divItem);
   });
-
 };
 
 // Funcion para imprimir los datos de la api

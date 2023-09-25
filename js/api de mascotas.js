@@ -24,10 +24,10 @@ function rankearPerro(ranking) {
   nuevaImagen.src = perroActual;
   if (ranking === "+") {
     perrosLikeContainer.appendChild(nuevaImagen);
-    perrosLikeContainer.classList.toggle("escondido", false)
+    perrosLikeContainer.classList.toggle("escondido", false);
   } else {
     perrosDislikeContainer.appendChild(nuevaImagen);
-    perrosDislikeContainer.classList.toggle("escondido", false)
+    perrosDislikeContainer.classList.toggle("escondido", false);
   }
   nuevoPerro();
 }
